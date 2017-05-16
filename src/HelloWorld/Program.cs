@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Collections.Generic;
 using Starcounter;
 using Simplified.Ring1;
 using Simplified.Ring2;
@@ -57,6 +59,9 @@ namespace HelloWorld
                     return json;
                 });
             });
+
+            Handle.GET("/HelloWorld/partial/expense/{?}", (string id) => new ExpenseJson { Data = DbHelper.FromID(DbHelper.Base64DecodeObjectID(id)) });
+            Blender.MapUri("/HelloWorld/partial/expense/{?}", "expense");
         }
     }
 }

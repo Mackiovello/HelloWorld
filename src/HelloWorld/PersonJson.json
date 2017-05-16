@@ -4,7 +4,7 @@
   "LastName$": "",
   "SaveTrigger$": 0,
   "FullName": "",
-  "Expenses": [{}],
+  "ExpensePartials": [{}],
   "NewExpenseTrigger$": 0,
   "CurrentBalance": 0,
   "CancelTrigger$": 0,
